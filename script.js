@@ -31,7 +31,9 @@ closeModalBtn.addEventListener("click", function(){
 })
 
 //Adicionar no carrinho
-menu.addEventListener("click", function(event){
+// Tu adicionou um evento de click no menu que é uma div então mesmo que tu não clique no botão se vc clicar
+//o evento de click é disparado sem necessidade
+/* menu.addEventListener("click", function(event){
     let parentButton = event.target.closest(".add-to-cart-btn")
 
         if(parentButton) {
@@ -43,7 +45,38 @@ menu.addEventListener("click", function(event){
 
         }
 
+}) */
+
+const buttonsAddToCart = document.querySelectorAll("button.add-to-cart-btn")
+
+buttonsAddToCart.forEach(buttonCart => {
+    buttonCart.addEventListener("click", function(event){
+        let button = event.currentTarget
+        
+        let name = button.getAttribute("data-name")
+        let price = parseFloat(button.getAttribute("data-price"))
+        //Add no carrinho
+        addToCart(name, price)    
+    })
 })
+
+const buttonsSizePrices = document.querySelectorAll("button.prices")
+
+buttonsSizePrices.forEach(buttonSize => {
+    buttonSize.addEventListener("click", function(event){
+        let button = event.currentTarget
+        
+        const name = button.getAttribute("data-name")
+        const price = button.getAttribute("data-price")
+        
+        const p = document.querySelector(`p[data-name="${name}"]`)
+        p.innerHTML = `R$ ${price}`
+        
+        const buttonCart = document.querySelector(`button[data-name="${name}"].add-to-cart-btn`)
+        buttonCart.setAttribute("data-price", price)
+    })
+})
+
 
 //Function para add no carrinho
 function addToCart(name, price){
