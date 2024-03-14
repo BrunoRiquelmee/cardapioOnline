@@ -232,11 +232,11 @@ checkOutBtn.addEventListener("click", function(){
         }
     
         return itemInfo;
-    }).join(" | ");
+    }).join("\n");
     
     const total = updateCartModal();
     
-    const message = encodeURIComponent(`${cartItems} | *Valor total: R$${total.toFixed(2)}* | Endereço: ${addressInput.value}`);
+    const message = encodeURIComponent(`${cartItems}  \n*Valor total: R$${total.toFixed(2)}*|\nEndereço: ${addressInput.value}`);
     const phone = "+5588998404876";
     
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
