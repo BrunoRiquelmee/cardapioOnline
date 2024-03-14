@@ -84,25 +84,28 @@ buttonsSizePrices.forEach(buttonSize => {
 
 
 //Function para add no carrinho
-function addToCart(name, price, size){
-    const existingItem = cart.find(item => item.name === name && item.size === size)
+function addToCart(name, price, size) {
+    const existingItem = cart.find(item => item.name === name && item.size === size);
     
-        if (existingItem){
-            //se o item ja existir aumenta apenas a quantidade +1
-            existingItem.quantity += 1;
-        
-        }else {
-
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        if (size) {
             cart.push({
                 name,
                 price,
                 size,
                 quantity: 1,
-            })
-
+            });
+        } else {
+            cart.push({
+                name,
+                price,
+                quantity: 1,
+            });
         }
-
-    updateCartModal()
+    }
+    updateCartModal();
 }
 
 
@@ -112,28 +115,34 @@ function updateCartModal(){
     let total = 0;
 
     cart.forEach(item => {
-        const cartItemElement = document.createElement("div");
-        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+    const cartItemElement = document.createElement("div");
+    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
-        cartItemElement.innerHTML = `
+    let sizeHTML = ''; // Inicializa uma string vazia para o tamanho HTML
+
+    // Verifica se o tamanho do item está definido antes de exibi-lo
+    if (item.size) {
+        sizeHTML = `<p>${item.size}</p>`;
+    }
+
+    cartItemElement.innerHTML = `
         <div class="flex items-center justify-between">
             <div>
                 <p class="font-medium">${item.name}</p>
-                <p>${item.size}</p>
+                ${sizeHTML} <!-- Exibe o tamanho apenas se estiver definido -->
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
-
             
             <button class="remove-btn" data-name="${item.name}">Remover</button>
-            
         </div>
-    `
+    `;
 
     total += item.price * item.quantity
 
-        cartItemsContainer.appendChild(cartItemElement)
-    })
+    // Adiciona o elemento do item do carrinho ao contêiner do carrinho
+    cartItemsContainer.appendChild(cartItemElement);
+});
 
     cartTotal.textContent = total.toLocaleString("pt-BR", {
         style: "currency",
@@ -141,6 +150,8 @@ function updateCartModal(){
     });
 
     cartCounter.innerHTML = cart.length;
+
+    return total;
 
 }
 
@@ -213,18 +224,24 @@ checkOutBtn.addEventListener("click", function(){
 
     //ENVIAR PEDIDO PRA API DO ZAP
     const cartItems = cart.map((item) => {
-        return (
-           ` ${item.name} Tamanho:(${item.size}) Quantidade: (${item.quantity}) Preço:R$${item.price} |` 
-        )
-    }).join("")
-
-    const message = encodeURIComponent(cartItems + ` Valor total: R$${cartTotal.textContent}`);
-    const phone = "+5585998404876"
+        let itemInfo = `${item.name} | Quantidade: (${item.quantity}) Preço:R$${item.price.toFixed(2)}`;
     
-
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
-
-    cart = []
+        // Adiciona o tamanho apenas se estiver definido para o item
+        if (item.size) {
+            itemInfo += ` Tamanho:(${item.size})`;
+        }
+    
+        return itemInfo;
+    }).join(" | ");
+    
+    const total = updateCartModal();
+    
+    const message = encodeURIComponent(`${cartItems} | *Valor total: R$${total.toFixed(2)}* | Endereço: ${addressInput.value}`);
+    const phone = "+5588998404876";
+    
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    
+    cart = [];
     updateCartModal();
 
 })
