@@ -70,13 +70,15 @@ buttonsSizePrices.forEach(buttonSize => {
         
         const name = button.getAttribute("data-name");
         const price = button.getAttribute("data-price");
+        const size = button.getAttribute("data-size");
         
         
         const p = document.querySelector(`p[data-name="${name}"]`)
-        p.innerHTML = `R$ ${price}`
+        p.innerHTML = `R$ ${price} (${size})`
         
         const buttonCart = document.querySelector(`button[data-name="${name}"].add-to-cart-btn`)
         buttonCart.setAttribute("data-price", price)
+        buttonCart.setAttribute("data-size", size);
     })
 })
 
@@ -217,7 +219,7 @@ checkOutBtn.addEventListener("click", function(){
     }).join("")
 
     const message = encodeURIComponent(cartItems + ` Valor total: R$${cartTotal.textContent}`);
-    const phone = "+558597642864"
+    const phone = "+5585998404876"
     
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
