@@ -56,8 +56,9 @@ buttonsAddToCart.forEach(buttonCart => {
         
         let name = button.getAttribute("data-name")
         let price = parseFloat(button.getAttribute("data-price"))
+        let size = button.getAttribute("data-size");
         //Add no carrinho
-        addToCart(name, price)    
+        addToCart(name, price,size)    
     })
 })
 
@@ -67,8 +68,9 @@ buttonsSizePrices.forEach(buttonSize => {
     buttonSize.addEventListener("click", function(event){
         let button = event.currentTarget
         
-        const name = button.getAttribute("data-name")
-        const price = button.getAttribute("data-price")
+        const name = button.getAttribute("data-name");
+        const price = button.getAttribute("data-price");
+        
         
         const p = document.querySelector(`p[data-name="${name}"]`)
         p.innerHTML = `R$ ${price}`
@@ -80,8 +82,8 @@ buttonsSizePrices.forEach(buttonSize => {
 
 
 //Function para add no carrinho
-function addToCart(name, price){
-    const existingItem = cart.find(item => item.name === name)
+function addToCart(name, price, size){
+    const existingItem = cart.find(item => item.name === name && item.size === size)
     
         if (existingItem){
             //se o item ja existir aumenta apenas a quantidade +1
@@ -92,6 +94,7 @@ function addToCart(name, price){
             cart.push({
                 name,
                 price,
+                size,
                 quantity: 1,
             })
 
@@ -114,6 +117,7 @@ function updateCartModal(){
         <div class="flex items-center justify-between">
             <div>
                 <p class="font-medium">${item.name}</p>
+                <p>${item.size}</p>
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
@@ -208,7 +212,7 @@ checkOutBtn.addEventListener("click", function(){
     //ENVIAR PEDIDO PRA API DO ZAP
     const cartItems = cart.map((item) => {
         return (
-           ` ${item.name} Quantidade: (${item.quantity}) Preço:R$${item.price} |` 
+           ` ${item.name} Tamanho:(${item.size}) Quantidade: (${item.quantity}) Preço:R$${item.price} |` 
         )
     }).join("")
 
@@ -227,7 +231,7 @@ checkOutBtn.addEventListener("click", function(){
 function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 23; 
+    return hora >= 10 && hora < 23; 
 }
 
 const spanItem = document.getElementById("date-span")
