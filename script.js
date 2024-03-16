@@ -147,8 +147,9 @@ function updateCartModal(){
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
-            
+            <div class="bg-red-500 text-white px-2 rounded">
             <button class="remove-btn " data-name="${item.name}">Remover</button>
+            </div>
         </div>
     `;
 
