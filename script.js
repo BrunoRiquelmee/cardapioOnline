@@ -48,6 +48,20 @@ closeModalBtn.addEventListener("click", function(){
 
 }) */
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.addEventListener("click", function() {
+        // Adiciona a classe de shake
+        button.classList.add("shake");
+
+        // Remove a classe de shake após a animação ser concluída
+        setTimeout(() => {
+            button.classList.remove("shake");
+        }, 500); // O valor 500 corresponde à duração da animação em milissegundos
+    });
+});
+
 const buttonsAddToCart = document.querySelectorAll("button.add-to-cart-btn")
 
 buttonsAddToCart.forEach(buttonCart => {
@@ -134,7 +148,7 @@ function updateCartModal(){
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
             
-            <button class="remove-btn" data-name="${item.name}">Remover</button>
+            <button class="remove-btn " data-name="${item.name}">Remover</button>
         </div>
     `;
 

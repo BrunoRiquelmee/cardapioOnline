@@ -44,313 +44,322 @@
     <h2 class="text2-l md:text-4xl font-bold text-center mt-9 mb-6">
         Conheça nosso menu
     </h2>
+    <div class="px-3">
 
-    <!--INICIO MENU-->
-    <div id="menu">
-        <div class="flex items-center justify-center text-lg  md:text-lg font-bold text-center mt-9 mb-6">
-            <p class="underline mr-16 hover:scale-110 duration-300"><a href="#sectionPizzas">Pizzas</p></a>
-            <p class="underline mr-16 hover:scale-110 duration-300"><a href="#sectionHamburguer">Hamburguers</p></a>
-            <p class="underline hover:scale-110 duration-300"><a href="#sectionBebidas">Bebidas</p></a>
+        <!--INICIO MENU-->
+        <div id="menu">
+            <div
+                class="flex items-center justify-center text-lg w-full px-10 md:w-full text-lg font-bold text-center mt-9 mb-6">
+                <p class="underline mr-16 hover:scale-110 duration-300"><a href="#sectionPizzas">Pizzas</p></a>
+                <p class="underline mr-16 hover:scale-110 duration-300"><a href="#sectionHamburguer">Hamburguers</p></a>
+                <p class="underline hover:scale-110 duration-300"><a href="#sectionBebidas">Bebidas</p></a>
+            </div>
+
+            <div class="mx-auto max-w-7xl px-2 my-2">
+                <h2 id="sectionPizzas" class="font-bold text-3xl mb-7 underline">Pizzas</h2>
+            </div>
+            <main class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/pizza-1.jpg" alt="Pizza Calabresa"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Pizza Calabresa</p>
+                        <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
+                            calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
+                            clássico irresistível que vai conquistar seu paladar!</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Calabresa" data-price="18.90" data-size="P">
+                                P
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Calabresa" data-price="20.00" data-size="M">
+                                M
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Calabresa" data-price="30.00" data-size="G">
+                                G
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p data-name="Pizza Calabresa" class="font-bold text-lg">R$ 18.90 (P)</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Calabresa"
+                                data-price="18.90" data-size="P">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/pizza-1.jpg" alt="Pizza Frango"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Pizza Frango</p>
+                        <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
+                            calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
+                            clássico irresistível que vai conquistar seu paladar!</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Frango" data-price="18.90" data-size="P">
+                                P
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Frango" data-price="20.00" data-size="M">
+                                M
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Frango" data-price="30.00" data-size="G">
+                                G
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p data-name="Pizza Frango" class="font-bold text-lg">R$ 18.90 (P)</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Frango"
+                                data-price="18.90" data-size="P">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/pizza-1.jpg" alt="Pizza Calabresa"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Pizza Quatro Queijos</p>
+                        <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
+                            calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
+                            clássico irresistível que vai conquistar seu paladar!</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Quatro Queijos" data-price="18.90" data-size="P">
+                                P
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Quatro Queijos" data-price="20.00" data-size="M">
+                                M
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Quatro Queijos" data-price="30.00" data-size="G">
+                                G
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p data-name="Pizza Quatro Queijos" class="font-bold text-lg">R$ 18.90 (P)</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Quatro Queijos"
+                                data-price="18.90" data-size="P">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/pizza-1.jpg" alt="Pizza Carne de sol"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Pizza Carne de sol</p>
+                        <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
+                            calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
+                            clássico irresistível que vai conquistar seu paladar!</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Carne de Sol" data-price="18.90" data-size="P">
+                                P
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Carne de Sol" data-price="20.00" data-size="M">
+                                M
+                            </button>
+                            <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
+                                data-name="Pizza Carne de Sol" data-price="30.00" data-size="G">
+                                G
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p data-name="Pizza Carne de Sol" class="font-bold text-lg">R$ 18.90 (P)</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Carne de Sol"
+                                data-price="18.90" data-size="P">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+            </main>
+
+            <div class="mx-auto max-w-7xl px-2 my-2">
+                <h2 id="sectionHamburguer" class="font-bold text-3xl mb-7 underline">Hamburguers</h2>
+            </div>
+            <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/hamb-2.png" alt="Hamburguer Smash"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Hamburguer Smash</p>
+                        <p class="text-sm">Pão Levinho de fermentação natural da trigo, burger 160g, queijo e maionese
+                            da
+                            casa</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p class="font-bold text-lg">R$ 18.90</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash"
+                                data-price="18.90">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/hamb-2.png" alt="Hamburguer Duplo"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Hamburguer Duplo</p>
+                        <p class="text-sm">Pão Levinho de fermentação natural da trigo, burger 160g, queijo e maionese
+                            da
+                            casa</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p class="font-bold text-lg">R$ 32.90</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Duplo"
+                                data-price="32.90">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/hamb-3.png" alt="Hamburguer Salad"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Hamburguer Salad</p>
+                        <p class="text-sm">Pão Levinho de fermentação natural da trigo, burger 160g, queijo e maionese
+                            da
+                            casa</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p class="font-bold text-lg">R$ 35.90</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Salad"
+                                data-price="35.90">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+                <!--PRODUTO ITEM-->
+                <div class="flex gap-2">
+                    <img src="./assets/hamb-4.png" alt="Hamburguer da Casa"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div>
+                        <p class="font-bold">Hamburguer da Casa</p>
+                        <p class="text-sm">Pão Levinho de fermentação natural da trigou, burger 160g, queijo e maionese
+                            da
+                            casa</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p class="font-bold text-lg">R$ 30</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer da Casa"
+                                data-price="30">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM-->
+
+            </main>
+
+
+            <div class="mx-auto max-w-7xl px-2 my-2">
+                <h2 id="sectionBebidas" class="font-bold text-3xl mb-7 underline">Bebidas</h2>
+            </div>
+
+            <!--GRID BEBIDAS-->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+                id="menu">
+
+                <!--BEBIDA ITEM-->
+                <div class="flex gap-2 w-full">
+                    <img src="./assets/refri-1.png" alt="Coca Lata"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <p class="font-bold">Coca Lata</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p class="font-bold text-lg">R$ 6</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca Lata"
+                                data-price="6">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM BEBIDA ITEM-->
+
+                <!--BEBIDA ITEM-->
+                <div class="flex gap-2 w-full bord">
+                    <img src="./assets/refri-2.png" alt="Guarana Lata"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <p class="font-bold">Guaraná Lata</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-4">
+                            <p class="font-bold text-lg">R$ 6</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Lata"
+                                data-price="6r">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM BEBIDA ITEM-->
+
+            </div>
+            <!--FIM GRID BEBIDAS-->
+
+
         </div>
-
-        <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 id="sectionPizzas" class="font-bold text-3xl mb-7 underline">Pizzas</h2>
-        </div>
-        <main class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/pizza-1.jpg" alt="Pizza Calabresa"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Pizza Calabresa</p>
-                    <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
-                        calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
-                        clássico irresistível que vai conquistar seu paladar!</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Calabresa" data-price="18.90" data-size="P">
-                            P
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Calabresa" data-price="20.00" data-size="M">
-                            M
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Calabresa" data-price="30.00" data-size="G">
-                            G
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p data-name="Pizza Calabresa" class="font-bold text-lg">R$ 18.90 (P)</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Calabresa"
-                            data-price="18.90" data-size="P">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/pizza-1.jpg" alt="Pizza Frango"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Pizza Frango</p>
-                    <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
-                        calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
-                        clássico irresistível que vai conquistar seu paladar!</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Frango" data-price="18.90" data-size="P">
-                            P
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Frango" data-price="20.00" data-size="M">
-                            M
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Frango" data-price="30.00" data-size="G">
-                            G
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p data-name="Pizza Frango" class="font-bold text-lg">R$ 18.90 (P)</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Frango"
-                            data-price="18.90" data-size="P">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/pizza-1.jpg" alt="Pizza Calabresa"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Pizza Quatro Queijos</p>
-                    <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
-                        calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
-                        clássico irresistível que vai conquistar seu paladar!</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Quatro Queijos" data-price="18.90" data-size="P">
-                            P
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Quatro Queijos" data-price="20.00" data-size="M">
-                            M
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Quatro Queijos" data-price="30.00" data-size="G">
-                            G
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p data-name="Pizza Quatro Queijos" class="font-bold text-lg">R$ 18.90 (P)</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Quatro Queijos"
-                            data-price="18.90" data-size="P">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/pizza-1.jpg" alt="Pizza Carne de sol"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Pizza Carne de sol</p>
-                    <p class="text-sm">Massa fina e crocante coberta com molho de tomate fresco, generosas fatias de
-                        calabresa defumada, queijo mussarela derretido, cebola em rodelas e azeitonas pretas. Um
-                        clássico irresistível que vai conquistar seu paladar!</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Carne de Sol" data-price="18.90" data-size="P">
-                            P
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Carne de Sol" data-price="20.00" data-size="M">
-                            M
-                        </button>
-                        <button class="bg-gray-900 text-white px-5 rounded prices hover:scale-125 duration-300"
-                            data-name="Pizza Carne de Sol" data-price="30.00" data-size="G">
-                            G
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p data-name="Pizza Carne de Sol" class="font-bold text-lg">R$ 18.90 (P)</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pizza Carne de Sol"
-                            data-price="18.90" data-size="P">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-        </main>
-
-        <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 id="sectionHamburguer" class="font-bold text-3xl mb-7 underline">Hamburguers</h2>
-        </div>
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/hamb-2.png" alt="Hamburguer Smash"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Hamburguer Smash</p>
-                    <p class="text-sm">Pão Levinho de fermentação natural da trigo, burger 160g, queijo e maionese da
-                        casa</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p class="font-bold text-lg">R$ 18.90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash"
-                            data-price="18.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/hamb-2.png" alt="Hamburguer Duplo"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Hamburguer Duplo</p>
-                    <p class="text-sm">Pão Levinho de fermentação natural da trigo, burger 160g, queijo e maionese da
-                        casa</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p class="font-bold text-lg">R$ 32.90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Duplo"
-                            data-price="32.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/hamb-3.png" alt="Hamburguer Salad"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Hamburguer Salad</p>
-                    <p class="text-sm">Pão Levinho de fermentação natural da trigo, burger 160g, queijo e maionese da
-                        casa</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p class="font-bold text-lg">R$ 35.90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Salad"
-                            data-price="35.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-            <!--PRODUTO ITEM-->
-            <div class="flex gap-2">
-                <img src="./assets/hamb-4.png" alt="Hamburguer da Casa"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div>
-                    <p class="font-bold">Hamburguer da Casa</p>
-                    <p class="text-sm">Pão Levinho de fermentação natural da trigou, burger 160g, queijo e maionese da
-                        casa</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p class="font-bold text-lg">R$ 30</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer da Casa"
-                            data-price="30">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM PRODUTO ITEM-->
-
-        </main>
-
-
-        <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 id="sectionBebidas" class="font-bold text-3xl mb-7 underline">Bebidas</h2>
-        </div>
-
-        <!--GRID BEBIDAS-->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
-            id="menu">
-
-            <!--BEBIDA ITEM-->
-            <div class="flex gap-2 w-full">
-                <img src="./assets/refri-1.png" alt="Coca Lata"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div class="w-full">
-                    <p class="font-bold">Coca Lata</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p class="font-bold text-lg">R$ 6</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca Lata" data-price="6">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM BEBIDA ITEM-->
-
-            <!--BEBIDA ITEM-->
-            <div class="flex gap-2 w-full bord">
-                <img src="./assets/refri-2.png" alt="Guarana Lata"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
-
-                <div class="w-full">
-                    <p class="font-bold">Guaraná Lata</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-4">
-                        <p class="font-bold text-lg">R$ 6</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Lata"
-                            data-price="6r">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--FIM BEBIDA ITEM-->
-
-        </div>
-        <!--FIM GRID BEBIDAS-->
-
 
     </div>
     <!--FIM MENU-->
 
     <!--MODAL CART-->
-    <div class="bg-black/65 w-full h-full overflow-auto fixed top-0 left-0 z-[99] items-center justify-center hidden
-    " id="cart-modal">
+    <div class="bg-black/65 w-full h-full py-4 overflow-auto fixed top-0 left-0 z-[99] items-center justify-center hidden
+" id="cart-modal">
 
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
