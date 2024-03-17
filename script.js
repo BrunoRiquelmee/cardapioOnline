@@ -99,25 +99,18 @@ buttonsSizePrices.forEach(buttonSize => {
 
 //Function para add no carrinho
 function addToCart(name, price, size) {
-    const existingItem = cart.find(item => item.name === name && item.size === size);
+    console.log(size);
+    const existingItem = cart.find(item => (item.name === name && (item.size === size || item.size === null)));
     
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
-        if (size) {
-            cart.push({
-                name,
-                price,
-                size,
-                quantity: 1,
-            });
-        } else {
-            cart.push({
-                name,
-                price,
-                quantity: 1,
-            });
-        }
+        cart.push({
+            name,
+            price,
+            size,
+            quantity: 1,
+        });
     }
     updateCartModal();
 }
@@ -148,7 +141,7 @@ function updateCartModal(){
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
             <div class="bg-red-500 text-white px-2 rounded">
-            <button class="remove-btn " data-name="${item.name}">Remover</button>
+            <button class="remove-btn " data-name="${item.name}" data-size=${item.size}>Remover</button>
             </div>
         </div>
     `;
@@ -174,14 +167,15 @@ function updateCartModal(){
 cartItemsContainer.addEventListener("click", function (event){
     if(event.target.classList.contains("remove-btn")) {
         const name = event.target.getAttribute("data-name")
+        const size = event.target.getAttribute("data-size")
         
-        removeitemCart(name);
+        removeitemCart(name, size);
     }
 })
 
 //function botao remover
-function removeitemCart(name){
-    const index = cart.findIndex(item => item.name === name);
+function removeitemCart(name, size){
+    const index = cart.findIndex(item => item.name === name && (item.size === size || item.size == null));
 
     if(index !== -1) {
         const item = cart [index]
