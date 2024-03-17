@@ -233,11 +233,11 @@ checkOutBtn.addEventListener("click", function(){
 
     //ENVIAR PEDIDO PRA API DO ZAP
     const cartItems = cart.map((item) => {
-        let itemInfo = `${item.name} | Quantidade: (${item.quantity}) Preço:R$${item.price.toFixed(2)}`;
+        let itemInfo = `•${item.name} | Quantidade: (${item.quantity}) | Preço:R$${item.price.toFixed(2)} `;
     
         // Adiciona o tamanho apenas se estiver definido para o item
         if (item.size) {
-            itemInfo += ` Tamanho:(${item.size})`;
+            itemInfo += `| Tamanho:(${item.size})`;
         }
     
         return itemInfo;
@@ -245,7 +245,7 @@ checkOutBtn.addEventListener("click", function(){
     
     const total = updateCartModal();
     
-    const message = encodeURIComponent(`${cartItems}  \n*Valor total: R$${total.toFixed(2)}*|\nEndereço: ${addressInput.value}`);
+    const message = encodeURIComponent(`${cartItems}  \n*Valor total: R$${total.toFixed(2)}*\n*Endereço: ${addressInput.value}*`);
     const phone = "+5588998404876";
     
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
